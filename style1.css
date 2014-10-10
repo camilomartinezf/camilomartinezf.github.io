@@ -1,0 +1,71 @@
+div.imgs{
+height:auto;
+width:auto;
+text-align:center;
+float:right;
+}
+div.imgs img {
+display: inline;
+padding: 5px; 
+width:240px;
+height:160px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px black;
+}
+div.desc {
+text-align: center;
+font-weight: normal;
+width: 240px;
+margin: 3px;
+padding: 5px;
+}
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 20px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 20px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-8xqh{font-weight:bold;background-color:gray}
+
+/* Turn the links red */
+a {color: red;}
+
+/* Make the name 36px font and italicized */
+h1{font-size:36px; color:white; font-style: italic; font-family: 'Gloria Hallelujah', cursive;}
+
+/* Make the section headers (e.g. Summary, Experience) 26px font */
+h4{font-size:26px;} 
+
+/* Make the job descriptions (e.g. Co-Owner, A1A Car Wash) blue and 20px font */
+h5{font-size:20px;}
+h5{color: blue;}
+
+/* Put a border around the photo, set it to the right */
+
+/* Set the font family for the whole document, and add a background image */
+
+body{font-family: 'Droid Sans', Arial;
+background-image:url(background.jpg);
+background-size:cover;
+background-position: center center;}
+
+
+/* Give the paragraphs and lists a 26px line height */
+
+p, li {line-height:26px;}
+
+/* Make the links purple when I put my mouse over it */
+a:hover{ color:purple;}
+
+/* Make the content of the page "sit on top of" the background */
+#wrapper {
+	background-color: white;
+	width: 960px;
+	margin: 20px auto;
+	padding:10px;
+	}
+
+/* Make it so you can see the footer and center it */
+#footer {
+	color: white;
+	margin: 20px auto;
+	text-align: center;
+}
