@@ -3,37 +3,47 @@
 <head>
   <title>Camilo Martinez, Globetrotter</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <div id="wrapper">
-    <h1>Camilo Martinez</h1>
-    <p>
-      <img id="camilo" src="camilo.jpg">
-      
-     <a href="http://camilomartinezf.github.io/blog.html">
-  <img id="blog" src="blog.jpg">
-</a></p>
-    <h2>Globetrotter</h2>
-    <h3>Evanston, IL</h3>
-    <section>
-      <h4>Connect With Me</h4>
-      <ul>
-        <li><a href="mailto:cmartinez2015@kellogg.northwestern.edu">Email</a></li>
-        <li><a href="http://twitter.com/camilomartinezf">Twitter</a></li>
-        <li><a href="http://facebook.com/camilomartinezf">Facebook</a></li>
-      </ul>
-    </section>
-    <section>
-      <h4>Summary</h4>
-      <p>
-       Camilo is a passionate traveler studying at Kellogg School of Management, where he is attending an amazing programming class that will help him show the world the places nobody can miss in Colombia.  
+  <div class="container">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Official Fan Page</a>
+        </div>
 
-       During the class Camilo has proved himself a brilliant programmer with a specialty in HTML, CSS and Javascript. In 2015, Camilo's groundbreaking research regarding templates for HTML programming will contribute to a project that will award him a tenure as a Programming Professor.  
-      </p>
-    </section>
-    <section>
-      <h4>Experience</h4>
+ <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">YouTube!</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="page-header">
+          <h1>Camilo Martinez</h1>
+        </div>
+          <h2>Globetrotter</h2>
+    <h3>Evanston, IL</h3>
+        <p>
+          Camilo is a passionate traveler studying at Kellogg School of Management, where he is attending an amazing programming class that will help him show the world the places nobody can miss in Colombia.  
+
+       During the class Camilo has proved himself a brilliant programmer with a specialty in HTML, CSS and Javascript. In 2015, Camilo's groundbreaking research regarding templates for HTML programming will contribute to a project that will award him a tenure as a Programming Professor. 
+       <div class="panel panel-default">
+          <div class="panel-heading">Experience</div>
+          <div class="panel-body">
       <section>
         <h5>Professional Tequila Drinker </h5>
         <p>Arriba, abajo, al centro, pa' dentro! Salud™!</p>
@@ -42,20 +52,44 @@
         <h5>Programmer</h5>
         <p> 5 week course at Northwestern University.</p>
       </section>
-    </section>
-    <section>
-      <h4>Skills</h4>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">Other Relevant Information</div>
+          <div class="panel-body">
+            
+               <section>
+      <h5>Skills</h5>
       <ul>
         <li>Python</li>
         <li>C/C++</li>
       </ul>
     </section>
     <section>
-      <h4>Hobbies</h4>
+      <h5>Hobbies</h5>
       <ul>
         <li>Travelling</li>
       </ul>
     </section>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h3><img id="camilo" src="camilo.jpg" class="img-rounded"></h3>
+        <div class="well">
+          <h3>Contact Me!</h3>
+          <a href="mailto:cmartinez2015@kellogg.northwestern.edu" class="btn btn-primary">Email</a>
+          <a href="http://twitter.com/camilomartinezf" class="btn btn-primary">Twitter</a>
+          <a href="http://facebook.com/camilomartinezf" class="btn btn-primary">Facebook</a>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
+
+     <a href="http://camilomartinezf.github.io/blog.html">
+  <img id="blog" src="blog.jpg">
