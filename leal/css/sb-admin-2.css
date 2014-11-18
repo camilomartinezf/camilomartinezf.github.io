@@ -17,6 +17,8 @@ body {
     min-height: 568px;
     background-color: #fff;
 }
+p.verde { color: green;
+        }
 
 @media(min-width:768px) {
     #page-wrapper {
