@@ -1,7 +1,7 @@
 User stories for my universal loyalty app:
 
 As a user, I want to create a user account, so I can keep registry of the places I visit.
-As a user, I want to change my personal info (email address, telephone, ID, address).
+As a user, I want to change my personal info (email address, telephone, address, age).
 As a user, I want to change my password, so that my account remains secure.
 As a user, I want to log in to my account with my email and password.
 As a user, I want to search the registered merchants by type of store.
