@@ -1,0 +1,38 @@
+User:
+  user_id: integer
+  member_id: integer
+  user_name: string
+  email: string
+  password: string
+  telephone: text
+  homeaddress: string
+  birthday: string
+  age: integer
+  gender: string
+
+Store:
+  store_id: integer
+  store_name: string
+  store_t: string
+  address: string
+  opening: integer
+  closing: integer
+  phone: integer
+  description: text
+  pointsfirst: integer
+  pointssecond: integer
+  pointsthird: integer
+  rewardfirst: text
+  rewardsecond: text
+  rewardthird: text
+
+Transaction:
+  transaction_id: integer
+  store_id: integer
+  member_id: integer
+  pointsawarded: integer
+  pointsre: integer
+
+Storemember:
+  store_id: integer
+  member_id: integer
