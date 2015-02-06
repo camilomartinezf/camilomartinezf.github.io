@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 0) do
   create_table "stores", force: :cascade do |t|
     t.integer "store_id"
     t.string  "store_name"
+    t.string  "store_t"
     t.string  "address"
     t.integer "opening"
     t.integer "closing"
@@ -35,7 +36,6 @@ ActiveRecord::Schema.define(version: 0) do
     t.text    "rewardfirst"
     t.text    "rewardsecond"
     t.text    "rewardthird"
-    t.string  "store_t"
   end
 
   add_index "stores", ["store_id"], name: "index_stores_on_store_id"

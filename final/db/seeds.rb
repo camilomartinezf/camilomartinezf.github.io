@@ -15,11 +15,11 @@ Storemember.delete_all
 
 # Create the users
 puts "Creating user..."
-camilo = User.create(member_id: "1020718269", user_name: "Camilo Martinez", email: "camilo@me.com", password: "hola", telephone: "2244206613", homeaddress: "1717 Ridge Ave., Evanston, IL 60201", birthday: "1986, 9, 11", age: "28", gender: "M")
-florence = User.create(member_id: "1020718255", user_name: "Flores Frech", email: "flores@me.com", password: "hola1", telephone: "2244206614", homeaddress: "1718 Ridge Ave., Evanston, IL 60201", birthday: "1985, 11, 12", age: "29", gender: "F")
-david = User.create(member_id: "1020718279", user_name: "David Pascual", email: "descript@me.com", password: "hola2", telephone: "2244245613", homeaddress: "1727 Ridge Ave., Evanston, IL 60201", birthday: "1984, 9, 11", age: "30", gender: "M")
-juan = User.create(member_id: "1025714527", user_name: "Juan Ramos", email: "juan@me.com", password: "hola3", telephone: "2244204413", homeaddress: "1813 Ridge Ave., Evanston, IL 60201", birthday: "1983, 9, 11", age: "31", gender: "M")
-caroline = User.create(member_id: "1035714526", user_name: "Caroline Doe", email: "carito@me.com", password: "hola4", telephone: "2244204411", homeaddress: "1812 Ridge Ave., Evanston, IL 60201", birthday: "1945, 1, 1", age: "70", gender: "F")
+camilo = User.create(user_id: "1", member_id: "1020718269", user_name: "Camilo Martinez", email: "camilo@me.com", password: "hola", telephone: "2244206613", homeaddress: "1717 Ridge Ave., Evanston, IL 60201", birthday: "1986, 9, 11", age: "28", gender: "M")
+florence = User.create(user_id: "2", member_id: "1020718255", user_name: "Flores Frech", email: "flores@me.com", password: "hola1", telephone: "2244206614", homeaddress: "1718 Ridge Ave., Evanston, IL 60201", birthday: "1985, 11, 12", age: "29", gender: "F")
+david = User.create(user_id: "3", member_id: "1020718279", user_name: "David Pascual", email: "descript@me.com", password: "hola2", telephone: "2244245613", homeaddress: "1727 Ridge Ave., Evanston, IL 60201", birthday: "1984, 9, 11", age: "30", gender: "M")
+juan = User.create(user_id: "4", member_id: "1025714527", user_name: "Juan Ramos", email: "juan@me.com", password: "hola3", telephone: "2244204413", homeaddress: "1813 Ridge Ave., Evanston, IL 60201", birthday: "1983, 9, 11", age: "31", gender: "M")
+caroline = User.create(user_id: "5", member_id: "1035714526", user_name: "Caroline Doe", email: "carito@me.com", password: "hola4", telephone: "2244204411", homeaddress: "1812 Ridge Ave., Evanston, IL 60201", birthday: "1945, 1, 1", age: "70", gender: "F")
 
 # Create the stores
 puts "Creating stores..."
