@@ -1,14 +1,13 @@
-<h1>Users of Leal</h1>
+<h3 class="page-header">
+Users of Leal Loyalty Program
+  <span class="pull-right">
+    <%= link_to "New User", new_user_path, class: 'btn btn-sm btn-success' %>
+  </span>
+</h3>
 
-<p><a href="/users/new" class="btn btn-primary">New User</a></p>
+<ul>
+  <% @users.each do |user| %>
+    <li><%= user.user_name %> <%= link_to "Edit", edit_user_path(user)%> <%= link_to "Delete", user_path(user), method: :delete, data: { confirm: 'Are you sure?'} %></li>
+  <% end %>
+</ul>
 
-<table class="table">
-
-	<% users = User.all %>
-	<% users.each do |user| %>
-	<tr>
-	<td>
-		<a href="/users/<%= user.id %>"> <%= user.user_name %></a></td>
-	</tr>
-
-<% end %>
