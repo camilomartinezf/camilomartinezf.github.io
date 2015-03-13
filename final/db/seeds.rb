@@ -31,19 +31,19 @@ bangers = Store.create( store_id: "5", store_name: "Bangers & Lace", store_t: "R
 
 # Create the transactions
 puts "Creating transactions..."
-tran1 = Transaction.create(store_id: "1", member_id: "1020718269", pointsawarded: "5", pointsre: "0")
-tran2 = Transaction.create(store_id: "1", member_id: "1025714527", pointsawarded: "100", pointsre: "0")
-tran3 = Transaction.create(store_id: "3", member_id: "1020718269", pointsawarded: "30", pointsre: "0")
-tran4 = Transaction.create(store_id: "4", member_id: "1020718269", pointsawarded: "8", pointsre: "0")
-tran5 = Transaction.create(store_id: "5", member_id: "1035714526", pointsawarded: "14", pointsre: "0")
+tran1 = Transaction.create(store_id: "1", user_id: "camilo.id", pointsawarded: "5", pointsre: "0")
+tran2 = Transaction.create(store_id: "1", user_id: "camilo.id", pointsawarded: "100", pointsre: "0")
+tran3 = Transaction.create(store_id: "3", user_id: "florence.id", pointsawarded: "30", pointsre: "0")
+tran4 = Transaction.create(store_id: "4", user_id: "juan.id", pointsawarded: "8", pointsre: "0")
+tran5 = Transaction.create(store_id: "5", user_id: "caroline.id", pointsawarded: "14", pointsre: "0")
 
 
 # Create the list of members for each store
-Storemember.create(store_id: smylie.id, member_id: tran1.id)
-Storemember.create(store_id: smylie.id, member_id: tran2.id)
-Storemember.create(store_id: soapie.id, member_id: tran3.id)
-Storemember.create(store_id: brothers.id, member_id: tran4.id)
-Storemember.create(store_id: bangers.id, member_id: tran5.id)
+Storemember.create(store_id: smylie.id, user_id: camilo.id)
+Storemember.create(store_id: smylie.id, user_id: juan.id)
+Storemember.create(store_id: soapie.id, user_id: camilo.id)
+Storemember.create(store_id: brothers.id, user_id: juan.id)
+Storemember.create(store_id: bangers.id, user_id: caroline.id)
 
 
 puts "There are now #{Store.count} stores, #{User.count} users, and #{Transaction.count} transactions in the database."

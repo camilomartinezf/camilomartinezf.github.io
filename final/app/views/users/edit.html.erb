@@ -1,24 +1,45 @@
 <%= form_for @users do |form| %>
 <!-- form_for is my best friend, does lots -->
-  <div class="form-group">
-    <%= form.label :user_name %>
-    <%= form.text_field :user_name, class: "form-control" %>
+    <div class="form-group">
+        <%= form.label :user_name %>
+        <%= form.text_field :user_name, class: "form-control", placeholder: "What's your name?"  %>
+     </div>
+       <div class="form-group">
     <%= form.label :member_id %>
-    <%= form.text_field :member_id, class: "form-control" %>
-     <%= form.label :email %>
-    <%= form.text_field :email, class: "form-control" %>
-     <%= form.label :password%>
-    <%= form.text_field :password, class: "form-control" %>
-     <%= form.label :telephone %>
-    <%= form.text_field :telephone, class: "form-control" %>
-     <%= form.label :homeaddress %>
-    <%= form.text_field :homeaddress, class: "form-control" %>
-     <%= form.label :birthday %>
-    <%= form.text_field :birthday, class: "form-control" %>
-    <%= form.label :age %>
-    <%= form.text_field :age, class: "form-control" %>
-   <%= form.label :gender %>
-    <%= form.text_field :gender, class: "form-control" %>
+    <%= form.text_field :member_id, class: "form-control", placeholder: "What's your state ID?"%>
+      </div>
+       <div class="form-group">
+<%= form.label :storemember %>
+    <%= form.collection_select :store_id, Storemember(:store_name), :id,  :store_name, { include_blank: true }, class: "form-control" %>
   </div>
+        <div class="form-group">
+     <%= form.label :email %>
+    <%= form.text_field :email, class: "form-control", placeholder: "What's your email?" %>
+      </div>
+        <div class="form-group">
+     <%= form.label :password%>
+    <%= form.text_field :password, class: "form-control", placeholder: "What's your password?" %>
+      </div>
+        <div class="form-group">
+     <%= form.label :telephone %>
+    <%= form.text_field :telephone, class: "form-control", placeholder: "What's your telephone?"%>
+      </div>
+        <div class="form-group">
+     <%= form.label :homeaddress %>
+    <%= form.text_field :homeaddress, class: "form-control", placeholder:"What's your address?" %>
+      </div>
+        <div class="form-group">
+     <%= form.label :birthday %>
+    <%= form.text_field :birthday, class: "form-control", placeholder:"What's your birthday?" %>
+      </div>
+        <div class="form-group">
+    <%= form.label :age %>
+    <%= form.text_field :age, class: "form-control",placeholder: "What's your age?" %>
+      </div>
+        <div class="form-group">
+    <%= form.label :gender %>
+    <%= form.text_field :gender, class: "form-control", placeholder: "What's your name?" %>
+      </div>
+ 
   <%= form.button 'Update User', class: "btn btn-success" %>
 <% end %>

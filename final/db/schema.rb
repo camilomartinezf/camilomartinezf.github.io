@@ -43,14 +43,14 @@ ActiveRecord::Schema.define(version: 0) do
   create_table "transactions", force: :cascade do |t|
     t.integer "transaction_id"
     t.integer "store_id"
-    t.integer "member_id"
     t.integer "pointsawarded"
     t.integer "pointsre"
+    t.integer "user_id"
   end
 
-  add_index "transactions", ["member_id"], name: "index_transactions_on_member_id"
   add_index "transactions", ["store_id"], name: "index_transactions_on_store_id"
   add_index "transactions", ["transaction_id"], name: "index_transactions_on_transaction_id"
+  add_index "transactions", ["user_id"], name: "index_transactions_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.integer "user_id"

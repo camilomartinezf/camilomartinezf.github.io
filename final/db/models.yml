@@ -27,12 +27,11 @@ Store:
   rewardthird: text
 
 Transaction:
-  transaction_id: integer
   store_id: integer
-  member_id: integer
+  user_id: integer
   pointsawarded: integer
   pointsre: integer
 
 Storemember:
-  store_id: integer
-  member_id: integer
+  store_name: integer
+  user_id: integer
