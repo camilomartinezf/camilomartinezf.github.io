@@ -1,15 +1,18 @@
 Rails.application.routes.draw do
-
-  resources :users
-  resources :stores
+  devise_for :users
+  resources :stores do
+    member do
+      get 'show_memberships'
+    end
+  end
+  put '/search_client', to: 'clients#search_client'
+  resources :clients
   resources :transactions
-  resources :storemembers
- 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'stores#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

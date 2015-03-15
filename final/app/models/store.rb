@@ -1,4 +1,5 @@
 class Store < ActiveRecord::Base
-	has_many :transactions,  dependent: :destroy
-	has_many :users, through: :storemembers
+	has_many :memberships
+	has_many :clients, through: :memberships
+	has_many :transactions
 end

@@ -12,4 +12,25 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+
+.truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.store-grid {
+	.button {
+		margin-bottom: 0;
+	}
+	.th {
+		padding-bottom: 0;
+	}
+}
+
+.alert-box {
+	margin-bottom: 0; 
+}

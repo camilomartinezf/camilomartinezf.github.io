@@ -11,61 +11,77 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150314183459) do
 
-  create_table "storemembers", force: :cascade do |t|
-    t.integer "store_id"
-    t.integer "member_id"
+  create_table "clients", force: :cascade do |t|
+    t.string   "full_name"
+    t.string   "cedula"
+    t.string   "phone"
+    t.date     "birthday"
+    t.integer  "age"
+    t.string   "address"
+    t.integer  "points"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "gender"
   end
 
-  add_index "storemembers", ["member_id"], name: "index_storemembers_on_member_id"
-  add_index "storemembers", ["store_id"], name: "index_storemembers_on_store_id"
+  create_table "memberships", force: :cascade do |t|
+    t.integer  "client_id"
+    t.integer  "store_id"
+    t.integer  "points"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "memberships", ["client_id"], name: "index_memberships_on_client_id"
+  add_index "memberships", ["store_id"], name: "index_memberships_on_store_id"
 
   create_table "stores", force: :cascade do |t|
-    t.integer "store_id"
-    t.string  "store_name"
-    t.string  "store_t"
-    t.string  "address"
-    t.integer "opening"
-    t.integer "closing"
-    t.integer "phone"
-    t.text    "description"
-    t.integer "pointsfirst"
-    t.integer "pointssecond"
-    t.integer "pointsthird"
-    t.text    "rewardfirst"
-    t.text    "rewardsecond"
-    t.text    "rewardthird"
+    t.string   "name"
+    t.string   "type_of_store"
+    t.string   "address"
+    t.string   "phone"
+    t.text     "description"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "pointsfirst"
+    t.integer  "pointssecond"
+    t.integer  "pointsthird"
+    t.string   "rewardfirst"
+    t.string   "rewardsecond"
+    t.string   "rewardthird"
   end
-
-  add_index "stores", ["store_id"], name: "index_stores_on_store_id"
 
   create_table "transactions", force: :cascade do |t|
-    t.integer "transaction_id"
-    t.integer "store_id"
-    t.integer "pointsawarded"
-    t.integer "pointsre"
-    t.integer "user_id"
+    t.integer  "client_id"
+    t.integer  "store_id"
+    t.text     "description"
+    t.integer  "total_cents"
+    t.integer  "points_awarded"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
+  add_index "transactions", ["client_id"], name: "index_transactions_on_client_id"
   add_index "transactions", ["store_id"], name: "index_transactions_on_store_id"
-  add_index "transactions", ["transaction_id"], name: "index_transactions_on_transaction_id"
-  add_index "transactions", ["user_id"], name: "index_transactions_on_user_id"
 
   create_table "users", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "member_id"
-    t.string  "user_name"
-    t.string  "email"
-    t.string  "password"
-    t.text    "telephone"
-    t.string  "homeaddress"
-    t.string  "birthday"
-    t.integer "age"
-    t.string  "gender"
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  add_index "users", ["member_id"], name: "index_users_on_member_id"
-  add_index "users", ["user_id"], name: "index_users_on_user_id"
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end
